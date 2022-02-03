@@ -107,14 +107,6 @@ jobs:
           MAKE: make
           CC: gcc
 
-      - name: Clean up test files
-        shell: cmd
-        run: rmdir 'tmp' /s /q  
-      - run: mix clean --deps
-        env:
-          MAKE: make
-          CC: gcc
-
       # - name: Compile (PowerShell)
       #   run: mix compile --warnings-as-errors
       #   env:
@@ -126,18 +118,3 @@ jobs:
       #     MAKE: make
       #     CC: gcc
 
-      - name: Setup MSYS2
-        uses: msys2/setup-msys2@v2
-        with:
-          path-type: inherit
-      - name: Compile and test (MSYS2)
-        env:
-          MAKE: make
-          CC: gcc
-        shell: msys2 {0}
-        run: |
-          rm -rf ./tmp
-          mix clean --deps
-          mix deps.get
-          mix compile --warnings-as-errors
-          mix test
