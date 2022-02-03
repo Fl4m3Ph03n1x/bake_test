@@ -36,7 +36,7 @@ defmodule BakeTest.MixProject do
     desktop: [
       steps: [:assemble, &Bakeware.assemble/1],
       applications: [
-        bake_test: :permanent,
+        bake_app: :permanent,
         runtime_tools: :permanent
       ],
       include_executables_for: [:windows]
