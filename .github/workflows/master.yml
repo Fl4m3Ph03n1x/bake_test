@@ -108,7 +108,7 @@ jobs:
           CC: gcc
 
       - name: Clean up test files
-        run: Remove-Item 'tmp' -Recurse -Force
+        run: rmdir 'tmp' /s /q  
       - run: mix clean --deps
         env:
           MAKE: make
