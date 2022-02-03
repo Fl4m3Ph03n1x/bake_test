@@ -16,8 +16,6 @@ defmodule BakeTest.MixProject do
 
 
   defp deps, do: [
-    {:bakeware, github: "Fl4m3Ph03n1x/bakeware"},
-
     {:bakeware, "~> 0.2.2"},
     {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
     {:excoveralls, "~> 0.10", only: :test},
