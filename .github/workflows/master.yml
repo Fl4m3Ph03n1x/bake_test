@@ -108,6 +108,7 @@ jobs:
           CC: gcc
 
       - name: Clean up test files
+        shell: cmd
         run: rmdir 'tmp' /s /q  
       - run: mix clean --deps
         env:
