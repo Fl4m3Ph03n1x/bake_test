@@ -114,16 +114,16 @@ jobs:
           MAKE: make
           CC: gcc
 
-      - name: Compile (PowerShell)
-        run: mix compile --warnings-as-errors
-        env:
-          MAKE: make
-          CC: gcc
-      - name: Test (PowerShell)
-        run: mix test
-        env:
-          MAKE: make
-          CC: gcc
+      # - name: Compile (PowerShell)
+      #   run: mix compile --warnings-as-errors
+      #   env:
+      #     MAKE: make
+      #     CC: gcc
+      # - name: Test (PowerShell)
+      #   run: mix test
+      #   env:
+      #     MAKE: make
+      #     CC: gcc
 
       - name: Setup MSYS2
         uses: msys2/setup-msys2@v2
